@@ -1,0 +1,166 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 48,
+				"texture_height": 48,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "whole",
+					"pivot": [-0.5, 16.75, 1.25]
+				},
+				{
+					"name": "body",
+					"parent": "whole",
+					"pivot": [-0.5, 14.65, 1],
+					"cubes": [
+						{"origin": [-4, 9.65, -1], "size": [7, 10, 4], "uv": [0, 12]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [-0.5, 22.65, 0.5],
+					"cubes": [
+						{"origin": [-3.5, 19.65, -2.5], "size": [6, 6, 6], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "whole",
+					"pivot": [-4, 18.25, 1]
+				},
+				{
+					"name": "right_shoulder",
+					"parent": "right_arm",
+					"pivot": [-4.10048, 17.75897, 1],
+					"cubes": [
+						{"origin": [-5.5, 17.75, -0.25], "size": [2.5, 2.5, 2.5], "pivot": [-5.25, 18.25, 1], "rotation": [0, 0, 60], "uv": [30, 14]}
+					]
+				},
+				{
+					"name": "right_bicep",
+					"parent": "right_shoulder",
+					"pivot": [-4.73608, 17.24222, 0.95],
+					"cubes": [
+						{"origin": [-13.1, 9.75, -0.3], "size": [2.1, 5.5, 2.5], "pivot": [-2, -2, -1], "rotation": [0, 0, 22.5], "uv": [28, 28]}
+					]
+				},
+				{
+					"name": "right_forearm",
+					"parent": "right_bicep",
+					"pivot": [-6.75, 12.95, 1],
+					"cubes": [
+						{"origin": [-7.5, 8.4, 0], "size": [1.5, 5.1, 2], "uv": [6, 33]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "whole",
+					"pivot": [3, 18.5, 1]
+				},
+				{
+					"name": "left_shoulder",
+					"parent": "left_arm",
+					"pivot": [3.10048, 17.75897, 1],
+					"cubes": [
+						{"origin": [2, 17.75, -0.25], "size": [2.5, 2.5, 2.5], "pivot": [4.25, 18.25, 1], "rotation": [0, 0, -60], "uv": [28, 6]}
+					]
+				},
+				{
+					"name": "left_bicep",
+					"parent": "left_shoulder",
+					"pivot": [4.23608, 17.24222, 0.95],
+					"cubes": [
+						{"origin": [10, 9.75, -0.3], "size": [2.1, 5.5, 2.5], "pivot": [1, -2, -1], "rotation": [0, 0, -22.5], "uv": [20, 28]}
+					]
+				},
+				{
+					"name": "left_forearm",
+					"parent": "left_bicep",
+					"pivot": [5.75, 12.95, 1],
+					"cubes": [
+						{"origin": [5, 8.4, 0], "size": [1.5, 5.1, 2], "uv": [0, 33]}
+					]
+				},
+				{
+					"name": "lower_body",
+					"parent": "whole",
+					"pivot": [-2.825, 4.15, 0.875]
+				},
+				{
+					"name": "left_leg",
+					"parent": "lower_body",
+					"pivot": [2, 10.4, 1]
+				},
+				{
+					"name": "left_quad",
+					"parent": "left_leg",
+					"pivot": [1.875, 9.65, 0.9],
+					"cubes": [
+						{"origin": [0.5, 5.4, -0.6], "size": [2.75, 4.5, 3], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "left_shin",
+					"parent": "left_quad",
+					"pivot": [1.875, 5.9, 0.875],
+					"cubes": [
+						{"origin": [0.75, 6.65, -5.75], "size": [2.25, 2.25, 5], "pivot": [1.5, 7.65, 1], "rotation": [90, 0, 0], "uv": [19, 7]}
+					]
+				},
+				{
+					"name": "left_foot",
+					"parent": "left_shin",
+					"pivot": [2, 1.4, 1],
+					"cubes": [
+						{"origin": [0.6, 0.05, -2], "size": [2.5, 1.6, 4.1], "uv": [22, 14]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "lower_body",
+					"pivot": [-2.7, 10.4, 1]
+				},
+				{
+					"name": "right_quad",
+					"parent": "right_leg",
+					"pivot": [-2.825, 9.65, 0.9],
+					"cubes": [
+						{"origin": [-4.2, 5.4, -0.6], "size": [2.75, 4.5, 3], "uv": [10, 26]}
+					]
+				},
+				{
+					"name": "right_shin",
+					"parent": "right_quad",
+					"pivot": [-2.825, 5.15, 0.875],
+					"cubes": [
+						{"origin": [-3.95, 6.65, -5.75], "size": [2.25, 2.25, 5], "pivot": [-3.2, 7.65, 1], "rotation": [90, 0, 0], "uv": [17, 21]}
+					]
+				},
+				{
+					"name": "right_foot",
+					"parent": "right_shin",
+					"pivot": [-2.85, 1.6, 0.8],
+					"cubes": [
+						{"origin": [-4.1, 0.05, -2], "size": [2.5, 1.6, 4.1], "uv": [26, 19]}
+					]
+				},
+				{
+					"name": "pelvis",
+					"parent": "lower_body",
+					"pivot": [-0.5, 9.65, 1],
+					"cubes": [
+						{"origin": [-4.25, 8.65, -1.25], "size": [7.5, 2, 4.5], "uv": [18, 0]}
+					]
+				}
+			]
+		}
+	]
+}
