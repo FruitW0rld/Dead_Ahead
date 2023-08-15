@@ -16,7 +16,7 @@ public class ModEvents {
     public static class ModEventBusEvents {
         @SubscribeEvent
         public static void  entityAttributeEvent(EntityAttributeCreationEvent event) {
-            event.put(ModEntityTypes.Runner.get(), RunnerEntity.setAttributes());
+            event.put(ModEntityTypes.RUNNER.get(), RunnerEntity.setAttributes());
         }
     }
 }

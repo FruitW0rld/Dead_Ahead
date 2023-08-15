@@ -40,10 +40,10 @@ public class RunnerEntity extends Monster implements IAnimatable {
     public static AttributeSupplier setAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 20)
-                .add(Attributes.ATTACK_DAMAGE, 3)
-                .add(Attributes.ATTACK_SPEED, 1)
-                .add(Attributes.MOVEMENT_SPEED, 0.4)
-                .add(Attributes.FOLLOW_RANGE, 10).build();
+                .add(Attributes.ATTACK_DAMAGE, 4)
+                .add(Attributes.ATTACK_SPEED, 1.0)
+                .add(Attributes.MOVEMENT_SPEED, 2.0)
+                .add(Attributes.FOLLOW_RANGE, 30).build();
 
     }
 
@@ -61,7 +61,8 @@ public class RunnerEntity extends Monster implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("runner.walk", ILoopType.EDefaultLoopTypes.LOOP));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("runner.run", ILoopType.EDefaultLoopTypes.LOOP));
+            return PlayState.CONTINUE;
         }
 
 

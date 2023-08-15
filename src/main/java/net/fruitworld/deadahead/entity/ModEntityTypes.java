@@ -14,8 +14,8 @@ public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DeadAhead.MOD_ID);
 
-    public static final RegistryObject<EntityType<RunnerEntity>> Runner =
-            ENTITY_TYPES.register("Runner",
+    public static final RegistryObject<EntityType<RunnerEntity>> RUNNER =
+            ENTITY_TYPES.register("runner",
                     () -> EntityType.Builder.of(RunnerEntity::new, MobCategory.MONSTER)
                             //.sized is the hit box
                             .sized(0.5f, 1.7f)

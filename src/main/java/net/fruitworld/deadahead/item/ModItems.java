@@ -19,7 +19,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DEAD_TAB)));
 
     public static final RegistryObject<Item> RUNNER_SPAWN_EGG = ITEMS.register("runner_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.Runner, 0x22b341, 0x19732e,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.RUNNER, 0x22b341, 0x19732e,
                     new Item.Properties().tab(ModCreativeModeTab.DEAD_TAB)));
 
     public static void register(IEventBus eventBus) {

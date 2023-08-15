@@ -51,7 +51,7 @@ public class DeadAhead
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-            EntityRenderers.register(ModEntityTypes.Runner.get(), RunnerRenderer::new);
+            EntityRenderers.register(ModEntityTypes.RUNNER.get(), RunnerRenderer::new);
 
         }
     }
