@@ -3,6 +3,7 @@ package net.fruitworld.deadahead.event;
 import net.fruitworld.deadahead.DeadAhead;
 import net.fruitworld.deadahead.entity.ModEntityTypes;
 import net.fruitworld.deadahead.entity.custom.RunnerEntity;
+import net.fruitworld.deadahead.entity.custom.WitchEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -17,6 +18,9 @@ public class ModEvents {
         @SubscribeEvent
         public static void  entityAttributeEvent(EntityAttributeCreationEvent event) {
             event.put(ModEntityTypes.RUNNER.get(), RunnerEntity.setAttributes());
+            event.put(ModEntityTypes.WITCH.get(), WitchEntity.setAttributes());
         }
+
+
     }
 }

@@ -31,19 +31,19 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 
-public class RunnerEntity extends Monster implements IAnimatable {
+public class WitchEntity extends Monster implements IAnimatable {
     private final AnimationFactory factory = GeckoLibUtil.createFactory(this);
-    public RunnerEntity(EntityType<? extends Monster> type, Level worldIn) {
+    public WitchEntity(EntityType<? extends Monster> type, Level worldIn) {
         super(type, worldIn);
     }
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 20)
-                .add(Attributes.ATTACK_DAMAGE, 4)
-                .add(Attributes.ATTACK_SPEED, 0.5)
-                .add(Attributes.MOVEMENT_SPEED, 0.30)
-                .add(Attributes.FOLLOW_RANGE, 30).build();
+                .add(Attributes.MAX_HEALTH, 25)
+                .add(Attributes.ATTACK_DAMAGE, 7)
+                .add(Attributes.ATTACK_SPEED, 0.6)
+                .add(Attributes.MOVEMENT_SPEED, 0.40)
+                .add(Attributes.FOLLOW_RANGE, 40).build();
 
     }
 
@@ -61,17 +61,17 @@ public class RunnerEntity extends Monster implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("runner.run", ILoopType.EDefaultLoopTypes.LOOP));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("witch.run", ILoopType.EDefaultLoopTypes.LOOP));
         }
 
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("runner.idle", ILoopType.EDefaultLoopTypes.LOOP));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("witch.idle", ILoopType.EDefaultLoopTypes.LOOP));
         return PlayState.CONTINUE;
     }
-    private PlayState attackPredicate(AnimationEvent<RunnerEntity> event) {
+    private PlayState attackPredicate(AnimationEvent<WitchEntity> event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("runner.attack", ILoopType.EDefaultLoopTypes.PLAY_ONCE));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("witch.attack", ILoopType.EDefaultLoopTypes.PLAY_ONCE));
             this.swinging = false;
 
         }

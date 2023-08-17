@@ -3,6 +3,7 @@ package net.fruitworld.deadahead;
 import com.mojang.logging.LogUtils;
 import net.fruitworld.deadahead.entity.ModEntityTypes;
 import net.fruitworld.deadahead.entity.client.RunnerRenderer;
+import net.fruitworld.deadahead.entity.client.WitchRenderer;
 import net.fruitworld.deadahead.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
@@ -52,6 +53,7 @@ public class DeadAhead
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             EntityRenderers.register(ModEntityTypes.RUNNER.get(), RunnerRenderer::new);
+            EntityRenderers.register(ModEntityTypes.WITCH.get(), WitchRenderer::new);
 
         }
     }

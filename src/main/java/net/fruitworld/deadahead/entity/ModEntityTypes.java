@@ -2,6 +2,7 @@ package net.fruitworld.deadahead.entity;
 
 import net.fruitworld.deadahead.DeadAhead;
 import net.fruitworld.deadahead.entity.custom.RunnerEntity;
+import net.fruitworld.deadahead.entity.custom.WitchEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -20,6 +21,12 @@ public class ModEntityTypes {
                             //.sized is the hit box
                             .sized(0.5f, 1.7f)
                             .build(new ResourceLocation(DeadAhead.MOD_ID, "runner").toString()));
+    public static final RegistryObject<EntityType<WitchEntity>> WITCH =
+            ENTITY_TYPES.register("witch",
+                    () -> EntityType.Builder.of(WitchEntity::new, MobCategory.MONSTER)
+                            //.sized is the hit box
+                            .sized(0.5f, 1.7f)
+                            .build(new ResourceLocation(DeadAhead.MOD_ID, "witch").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
